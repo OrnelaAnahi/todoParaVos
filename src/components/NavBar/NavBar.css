@@ -1,0 +1,27 @@
+.nav{
+    width: 40vw;
+    align-content: center;
+}
+.ulNav{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.liNav{
+    margin:10px 10px 5px 10px;
+    padding: 0px;
+    transition: all 2s ease;
+    border-radius: 5px;
+    height: 25px;
+}
+.liNav:hover{
+    background-color: black;
+}
+.linksNav{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+.linksNav:hover{
+    color: #B958A5;
+}
