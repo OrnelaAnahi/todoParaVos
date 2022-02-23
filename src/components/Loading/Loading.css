@@ -1,0 +1,24 @@
+.cargando{
+  text-align: center;
+  color: #4c3f91;
+}
+.divCargando{
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.unidos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cargandoSimbolo{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+.parrafoCargando{
+  text-align: center;
+}

@@ -2,7 +2,8 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import Logo from './components/Icons/Icon.png'
 // import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+// import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+// import Loading from './components/Loading/Loading'
 function App () {
   return (
     <>
@@ -13,7 +14,8 @@ function App () {
       </header>
       <main>
         {/* <ItemListContainer grettings='Bienvenidos' /> */}
-        <ItemDetailContainer />
+        {/* <ItemDetailContainer /> */}
+        {/* <Loading /> */}
       </main>
     </>
   )

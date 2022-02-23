@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import ImgEjemplo from './ImgEjemplo.png'
 import ItemList from '../ItemList/ItemList'
+import Loading from '../Loading/Loading'
 import './ItemListContainer.css'
 
 export default function ItemsListContainer (props) {
@@ -37,7 +38,7 @@ export default function ItemsListContainer (props) {
     <div>
       <h2>{props.grettings}</h2>
       <div className='divCtnItemsList'>
-        {producto && <ItemList product={producto} />}
+        {producto ? <ItemList product={producto} /> : <Loading />}
       </div>
     </div>
 

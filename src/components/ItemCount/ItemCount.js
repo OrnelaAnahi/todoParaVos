@@ -4,7 +4,7 @@ import './ItemCount.css'
 export default function ItemCount ({ stock, initial, onAdd }) {
   const [cantidad, setCantidad] = useState(initial)
   function sumarCantidad () {
-    if (cantidad <= stock) {
+    if (cantidad < stock) {
       setCantidad(cantidad + 1)
     }
   }
