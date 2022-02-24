@@ -5,7 +5,7 @@ import Logo from '../Icons/Icon.png'
 export default function NavBar () {
   return (
     <>
-      <header className='header'>
+      <header className='header' id='header'>
         <img src={Logo} className='logo' />
         <h1 className='tituloPrincipal'>Todo para vos</h1>
         <nav className='nav'>
