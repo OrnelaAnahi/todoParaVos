@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import ImgEjemplo from '../ItemListContainer/ImgEjemplo.png'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import Loading from '../Loading/Loading'
+import { useParams } from 'react-router-dom'
 
 export default function ItemDetailContainer () {
   const detalleProducto = [
@@ -15,9 +16,10 @@ export default function ItemDetailContainer () {
     { id: 8, title: 'CANGURO BROSS LISO COLOR', img: ImgEjemplo, precio: 4520, talle: ['M', 'S', 'L', 'XL'], categoria: 'Hombre', stock: 3 }
   ]
   const [detailProductoItem, setDetailProductoItem] = useState(null)
-  const buscarId = 3
+  const buscarId = useParams()
+  const encontrar = parseInt(buscarId.id)
   const getItem = (arrayDeProductos) => {
-    const item = arrayDeProductos.find(elemento => elemento.id === buscarId)
+    const item = arrayDeProductos.find(elemento => elemento.id === encontrar)
     setDetailProductoItem(item)
   }
   useEffect(() => {
@@ -32,7 +34,7 @@ export default function ItemDetailContainer () {
       .catch((err) => {
         console.log('error: ' + err)
       })
-  }, [])
+  })
 
   return (
     <div className='ctnDetail'>

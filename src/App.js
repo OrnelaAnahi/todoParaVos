@@ -1,22 +1,27 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import NoFound from './components/NotFound/NotFound'
+import Nosotros from './components/Nosotros/Nosotros'
+import Envios from './components/Envios/Envios'
+import Sucursales from './components/Sucursales/Sucursales'
 import NavBar from './components/NavBar/NavBar'
-import Logo from './components/Icons/Icon.png'
-// import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-// import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-// import Loading from './components/Loading/Loading'
 function App () {
   return (
     <>
-      <header className='header'>
-        <img src={Logo} className='logo' />
-        <h1 className='tituloPrincipal'>Todo para vos</h1>
+      <BrowserRouter>
         <NavBar />
-      </header>
-      <main>
-        {/* <ItemListContainer grettings='Bienvenidos' /> */}
-        {/* <ItemDetailContainer /> */}
-        {/* <Loading /> */}
-      </main>
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/category/:id' element={<ItemListContainer />} />
+          <Route path='item/:id' element={<ItemDetailContainer />} />
+          <Route path='/*' element={<NoFound />} />
+          <Route path='/envios' element={<Envios />} />
+          <Route path='/nosotros' element={<Nosotros />} />
+          <Route path='/sucursales' element={<Sucursales />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
