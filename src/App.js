@@ -8,6 +8,7 @@ import Envios from './components/Envios/Envios'
 import Sucursales from './components/Sucursales/Sucursales'
 import NavBar from './components/NavBar/NavBar'
 import Footer from './components/Footer/Footer'
+import Cart from './components/Cart/Cart'
 function App () {
   return (
     <>
@@ -22,6 +23,7 @@ function App () {
             <Route path='/envios' element={<Envios />} />
             <Route path='/nosotros' element={<Nosotros />} />
             <Route path='/sucursales' element={<Sucursales />} />
+            <Route path='/cart' element={<Cart />} />
           </Routes>
         </main>
         <Footer />

@@ -6,7 +6,7 @@ export default function NavBar () {
   return (
     <>
       <header className='header' id='header'>
-        <img src={Logo} className='logo' />
+        <Link to='/'><img src={Logo} className='logo' /></Link>
         <h1 className='tituloPrincipal'>Todo para vos</h1>
         <nav className='nav'>
           <ul className='ulNav'>
