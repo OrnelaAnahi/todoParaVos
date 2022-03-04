@@ -1,21 +1,6 @@
-import { useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
-import { Link } from 'react-router-dom'
-function seguirCompra () {
-  return (
-    <div className='seguirCompra'>
-      <Link to='/cart'><button className='btnSeguirCompra'>Ir al carrito y finalizar compra</button></Link>
-      <Link to='/'><button className='btnSeguirCompra'>Seguir comprando</button></Link>
-    </div>
-  )
-}
-
 export default function ItemDetail ({ producto }) {
-  const [valorCount, setValorCount] = useState(false)
-  const borrarTitulo = (text) => {
-    setValorCount(text)
-  }
   const talles = producto.talle
   return (
     <>
@@ -40,7 +25,7 @@ export default function ItemDetail ({ producto }) {
           })}
         </ul>
         <div className='detailCantidad'>
-          {valorCount ? seguirCompra() : <ItemCount onAdd={(text) => borrarTitulo(text)} stock={producto.stock} initial={1} />}
+          <ItemCount stock={producto.stock} initial={1} item={producto} />
         </div>
       </div>
     </>
