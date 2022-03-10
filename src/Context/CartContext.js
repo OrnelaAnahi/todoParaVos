@@ -6,7 +6,7 @@ const CartContext = ({ children }) => {
   const [cartItm, setCartItm] = useState([])
   const [talValue, setTalValue] = useState(false)
   const addCart = (item, quanty, talleSelect) => {
-    if (talleSelect !== null) {
+    if (talleSelect !== null && talleSelect !== 'Seleccionar talle') {
       const totalPrice = quanty * item.precio
       const cantItem = { ...item, quanty, totalPrice, talleSelect }
       setCartItm([...cartItm, cantItem])
