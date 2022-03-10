@@ -1,12 +1,19 @@
 import { createContext, useState } from 'react'
 
-export const cartProvider = createContext({})
+export const CartProvider = createContext({})
 
 const CartContext = ({ children }) => {
   const [cartItm, setCartItm] = useState([])
-  const addCart = (item, quanty) => {
-    const cantItem = { ...item, quanty }
-    setCartItm([...cartItm, cantItem])
+  const [talValue, setTalValue] = useState(false)
+  const addCart = (item, quanty, talleSelect) => {
+    if (talleSelect !== null) {
+      const totalPrice = quanty * item.precio
+      const cantItem = { ...item, quanty, totalPrice, talleSelect }
+      setCartItm([...cartItm, cantItem])
+      setTalValue(false)
+    } else {
+      setTalValue(true)
+    }
   }
   const isInCart = (itmId) => {
     return cartItm.some((elem) => elem.id === itmId)
@@ -18,8 +25,27 @@ const CartContext = ({ children }) => {
   const clear = () => {
     setCartItm([])
   }
+  const aumentarCant = (id) => {
+    setCartItm(cartItm.map((r) => {
+      if (r.id === id && r.quanty < r.stock) {
+        r.quanty = r.quanty + 1
+        r.priceTotal = r.quanty * r.price
+      }
+      return r
+    }))
+  }
+  const disminuirCant = (id) => {
+    setCartItm(cartItm.map((r) => {
+      if (r.id === id && r.quanty > 1) {
+        r.quanty = r.quanty - 1
+        r.priceTotal = r.quanty * r.price
+      }
+      return r
+    }))
+  }
+  console.log(cartItm)
   return (
-    <cartProvider.Provider value={{ addCart, isInCart, removeItem, clear }}>{children}</cartProvider.Provider>
+    <CartProvider.Provider value={{ addCart, isInCart, removeItem, clear, cartItm, talValue, aumentarCant, disminuirCant }}>{children}</CartProvider.Provider>
   )
 }
 
