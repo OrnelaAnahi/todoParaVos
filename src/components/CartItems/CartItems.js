@@ -5,18 +5,24 @@ export default function CartItems ({ item }) {
   const { removeItem, aumentarCant, disminuirCant } = useContext(CartProvider)
   return (
     <div className='carritoCart'>
-      <img className='imgCart' src={item.img} />
-      <h3 className='titleCart'>{item.title}</h3>
-      <p className='precioCart'>Precio por unidad: $ {new Intl.NumberFormat('es-CO').format(item.precio)}</p>
-      <p className='stockCart'>Stock:{item.stock}</p>
-      <p>Talle seleccionado: {item.talleSelect}</p>
-      <div>
-        <button onClick={() => aumentarCant(item.id)}>+</button>
-        <p>{item.quanty}</p>
-        <button onClick={() => disminuirCant(item.id)}>-</button>
+      <div className='imgCartDiv'>
+        <img className='imgCart' src={item.img} />
       </div>
-      <p>Precio total: $ {new Intl.NumberFormat('es-CO').format(item.totalPrice)}</p>
-      <button className='eliminarCart' onClick={() => removeItem(item.id)}>Eliminar elemento</button>
+      <div className='infoCartDiv'>
+        <h3 className='titleCart'>{item.title}</h3>
+        <p className='precioCart'>Precio por unidad: $ {new Intl.NumberFormat('es-CO').format(item.precio)}</p>
+        <p className='stockCart'>Stock:{item.stock}</p>
+        <p>Talle seleccionado: {item.talleSelect}</p>
+      </div>
+      <div className='btnCartDiv'>
+        <div className='divCantCart'>
+          <button className='btnCant' onClick={() => aumentarCant(item.id)}>+</button>
+          <p className='cant'>{item.quanty}</p>
+          <button className='btnCant' onClick={() => disminuirCant(item.id)}>-</button>
+        </div>
+        <p className='precioTotalItem'>Precio total: $ {new Intl.NumberFormat('es-CO').format(item.precio * item.quanty)}</p>
+        <button className='eliminarCart' onClick={() => removeItem(item.id)}>Eliminar elemento</button>
+      </div>
     </div>
   )
 }

@@ -1,9 +1,54 @@
+.carritoCart{
+  border: 1px solid #8c8685;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 .imgCart{
   width: 150px;
+  padding: 5px;
 }
-.precioCart{
+.precioTotalItem{
   font-weight: bolder;
 }
+
 .titleCart{
   font-size: 20px;
+  margin: 5px 5px 5px 0px;
+}
+.divCantCart{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #8c8685;
+  padding: 2px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.cant{
+  border: 1px solid #8c8685;
+  border-radius: 5px;
+  height: 25px;
+  width: 30px;
+  text-align: center;
+  margin: 3px;
+}
+
+.btnCant{
+  height: 25px;
+  border-radius: 5px;
+  margin: 3px;
+  background-color: #4c3f91;
+  box-shadow: 2px 2px 2px 1px rgba(76, 63, 145, 0.5);
+  border: none;
+  width: 25px;
+}
+.eliminarCart{
+  border-radius: 5px;
+  margin: 3px;
+  background-color: #4c3f91;
+  box-shadow: 2px 2px 2px 1px rgba(76, 63, 145, 0.5);
+  border: none;
 }

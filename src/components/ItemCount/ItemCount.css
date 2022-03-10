@@ -16,7 +16,8 @@
     border-radius: 5px;
     margin: 3px;
     background-color: #4c3f91;
-    box-shadow: 1px 1px 1px #4c3f91;
+    box-shadow: 2px 2px 2px 1px rgba(76, 63, 145, 0.5);
+    border: none;
 }
 .pCantidad{
     width: 60px;

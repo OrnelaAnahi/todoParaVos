@@ -29,7 +29,7 @@ const CartContext = ({ children }) => {
     setCartItm(cartItm.map((r) => {
       if (r.id === id && r.quanty < r.stock) {
         r.quanty = r.quanty + 1
-        r.priceTotal = r.quanty * r.price
+        r.totalPrice = r.quanty * r.precio
       }
       return r
     }))
@@ -38,7 +38,7 @@ const CartContext = ({ children }) => {
     setCartItm(cartItm.map((r) => {
       if (r.id === id && r.quanty > 1) {
         r.quanty = r.quanty - 1
-        r.priceTotal = r.quanty * r.price
+        r.totalPrice = r.quanty * r.precio
       }
       return r
     }))
