@@ -43,7 +43,7 @@ const CartContext = ({ children }) => {
       return r
     }))
   }
-  console.log(cartItm)
+
   return (
     <CartProvider.Provider value={{ addCart, isInCart, removeItem, clear, cartItm, talValue, aumentarCant, disminuirCant }}>{children}</CartProvider.Provider>
   )

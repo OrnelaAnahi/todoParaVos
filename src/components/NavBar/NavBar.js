@@ -13,6 +13,12 @@ export default function NavBar () {
             <li className='liNav'>
               <Link to='/' className='linksNav'>Inicio</Link>
             </li>
+            <li className='linksNav liNav'>Catalogo
+              <ul>
+                <li className='liNav'><Link to='/category/campera' className='linksNav '>Camperas</Link></li>
+                <li className='liNav'><Link to='/category/remeras' className='linksNav'>Remeras</Link></li>
+              </ul>
+            </li>
             <li className='liNav'>
               <Link to='/sucursales' className='linksNav'>Sucursales</Link>
             </li>

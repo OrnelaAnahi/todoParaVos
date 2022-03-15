@@ -5,7 +5,7 @@ import { CartProvider } from '../../Context/CartContext'
 import { Link } from 'react-router-dom'
 export default function CartWidget () {
   const { cartItm } = useContext(CartProvider)
-  console.log(cartItm)
+
   return (
     <Link to='/cart'>
       <div className='carrito'>

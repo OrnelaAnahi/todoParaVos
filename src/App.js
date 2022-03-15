@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer'
 import Cart from './components/Cart/Cart'
 import CartContext from './Context/CartContext'
 import FinCompra from './components/FinCompra/FinCompra'
+import ItemListContainerCategory from './components/ItemListContainerCategory/ItemListContainerCategory'
 function App () {
   return (
     <>
@@ -20,7 +21,7 @@ function App () {
           <main>
             <Routes>
               <Route path='/' element={<ItemListContainer />} />
-              <Route path='/category/:id' element={<ItemListContainer />} />
+              <Route path='/category/:id' element={<ItemListContainerCategory />} />
               <Route path='item/:id' element={<ItemDetailContainer />} />
               <Route path='/*' element={<NoFound />} />
               <Route path='/envios' element={<Envios />} />
