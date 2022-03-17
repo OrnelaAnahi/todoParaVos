@@ -28,7 +28,7 @@ function App () {
               <Route path='/nosotros' element={<Nosotros />} />
               <Route path='/sucursales' element={<Sucursales />} />
               <Route path='/cart' element={<Cart />} />
-              <Route path='/compraexitosa' element={<FinCompra />} />
+              <Route path='/compraDat' element={<FinCompra />} />
             </Routes>
           </main>
           <Footer />

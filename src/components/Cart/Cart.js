@@ -23,7 +23,7 @@ export default function Cart () {
             {cartItm.map(item => <CartItems item={item} key={item.id} />)}
             <p>Total: {new Intl.NumberFormat('es-CO').format(cartItm.map((item) => item.totalPrice).reduce((prev, curr) => prev + curr, 0))}</p>
             <button onClick={clear} className='btnCart'>Vaciar carrito</button>
-            <Link to='/compraexitosa'><button className='btnCart'>Comprar</button></Link>
+            <Link to='/compraDat'><button className='btnCart'>Comprar</button></Link>
           </div>
           )
 }
