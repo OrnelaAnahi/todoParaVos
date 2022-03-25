@@ -1,0 +1,12 @@
+.sucursales{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.nombreMapa{
+  width: 45vw;
+}
+.infoSucursal{
+  width: 45vw;
+  align-self: center;
+}

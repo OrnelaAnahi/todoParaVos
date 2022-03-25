@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import NoFound from './components/NotFound/NotFound'
-import Nosotros from './components/Nosotros/Nosotros'
 import Envios from './components/Envios/Envios'
 import Sucursales from './components/Sucursales/Sucursales'
 import NavBar from './components/NavBar/NavBar'
@@ -25,7 +24,6 @@ function App () {
               <Route path='item/:id' element={<ItemDetailContainer />} />
               <Route path='/*' element={<NoFound />} />
               <Route path='/envios' element={<Envios />} />
-              <Route path='/nosotros' element={<Nosotros />} />
               <Route path='/sucursales' element={<Sucursales />} />
               <Route path='/cart' element={<Cart />} />
               <Route path='/compraDat' element={<FinCompra />} />

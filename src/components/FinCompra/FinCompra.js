@@ -3,7 +3,8 @@ import { db } from '../../utils/firebase'
 import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CartProvider } from '../../Context/CartContext'
-
+import Genial from './Genial.jpg'
+import './FinCompra.css'
 export default function FinCompra () {
   const [compra, setCompra] = useState(null)
   const { cartItm, clear } = useContext(CartProvider)
@@ -34,9 +35,12 @@ export default function FinCompra () {
   const compraRealizada = () => {
     return (
       <>
-        <h2>¡¡Muchas gracias por su compra!!</h2>
-        <p>Dentro de 10 dias habiles le enviaremos sus productos</p>
-        <p>Su codigo de compra es: {compra}</p>
+        <div className='compraRealizada'>
+          <h2>¡¡Muchas gracias por su compra!!</h2>
+          <img src={Genial} className='genial' />
+          <p>Dentro de 10 dias habiles le enviaremos sus productos</p>
+          <p>Su codigo de compra es: <span className='span'>{compra}</span></p>
+        </div>
       </>
     )
   }
@@ -75,7 +79,7 @@ export default function FinCompra () {
           </section>
           )}
 
-      <Link to='/'><p>Volver al inicio</p></Link>
+      <Link to='/'><p className='goInicio'>Volver al inicio</p></Link>
     </>
   )
 }

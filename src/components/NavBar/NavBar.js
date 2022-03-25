@@ -23,9 +23,6 @@ export default function NavBar () {
               <Link to='/sucursales' className='linksNav'>Sucursales</Link>
             </li>
             <li className='liNav'>
-              <Link to='/nosotros' className='linksNav'>Nosotros</Link>
-            </li>
-            <li className='liNav'>
               <Link to='/envios' className='linksNav'>Envios</Link>
             </li>
           </ul>

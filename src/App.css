@@ -22,3 +22,7 @@ h2, h3{
 body{
   margin-top: 5px;
 }
+main{
+  position: relative;
+  min-height: 65vh;
+}

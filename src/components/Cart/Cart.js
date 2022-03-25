@@ -3,6 +3,7 @@ import { CartProvider } from '../../Context/CartContext'
 import CartItems from '../CartItems/CartItems'
 import { Link } from 'react-router-dom'
 import './Cart.css'
+import Homero from './CartVacio.jpg'
 export default function Cart () {
   const { cartItm, clear } = useContext(CartProvider)
   useEffect(() => { console.log('actual') }, cartItm)
@@ -13,7 +14,8 @@ export default function Cart () {
       cartItm.length === 0
         ? (
           <div className='cartVacio'>
-            <p>El carrito esta vacio</p>
+            <h2>El carrito esta vacio</h2>
+            <img src={Homero} className='homero' />
             <Link to='/'>Ir a comprar</Link>
           </div>
           )

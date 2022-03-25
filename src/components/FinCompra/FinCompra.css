@@ -1,0 +1,16 @@
+.genial{
+  width: 400px;
+}
+.compraRealizada{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.goInicio{
+  padding: 10px;
+  background-color: rgb(76, 63, 145, 0.2);
+  border-radius: 5px;
+  width: 150px;
+  color: black;
+}

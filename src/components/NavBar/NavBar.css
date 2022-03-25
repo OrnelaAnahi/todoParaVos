@@ -1,6 +1,7 @@
 .nav{
     width: 40vw;
     align-content: center;
+    z-index: 100;
 }
 .ulNav{
     list-style: none;

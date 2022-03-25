@@ -10,3 +10,12 @@
   flex-direction: column;
   align-items: center;
 }
+.cartVacio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.homero{
+  height: 400px;
+}

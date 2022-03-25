@@ -1,0 +1,30 @@
+.mainSeccionEnvios {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.sectionEnvios {
+  padding: 10px;
+  margin: 10px;
+  border: 1px #bbe1fa solid;
+  width: 50%;
+}
+
+.sectionPreguntas {
+  margin: 10px;
+  padding: 10px;
+  width: 50%;
+  border: 1px #bbe1fa solid;
+}
+
+.duda {
+  font-weight: 800;
+  padding: 10px 0px;
+}
+.respuesta {
+  margin-left: 15px;
+}
+.span {
+  font-weight: 600;
+}
