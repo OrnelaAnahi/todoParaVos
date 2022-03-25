@@ -72,7 +72,7 @@ export default function FinCompra () {
                   />
                 </div>
                 <div className='formularioEspacio'>
-                  <input type='submit' value='Finalizar compra' />
+                  <input type='submit' value='Finalizar compra' className='btnCart' />
                 </div>
               </fieldset>
             </form>
