@@ -6,6 +6,6 @@ La aplicación consiste en una tienda online funcional, con componentes reutiliz
 ## 🛠️ Tecnologías Utilizadas
 
 - **React.js**
-- **Context API** para manejo de estado global
+- **Context API** 
 - **Firebase** 
 -  CSS Modules
